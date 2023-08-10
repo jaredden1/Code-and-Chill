@@ -1,0 +1,19 @@
+<%- include('../partials/header') %>
+
+<form id="New-food" action='/foods' method='POST'>
+    <label> name: <input type= 'text' name='name'></label>
+    <label> category: <select name="category"> 
+        <option value="American">American</option>
+        <option value="Chinese">Chinese</option>
+        <option value="Thai">Thai</option>
+        <option value="Japanese">Japanese</option>
+        <option value="Italian">Italian</option>
+        <option value="Mexican">Mexican</option>
+        <option value="Indian">Indian</option>
+        </select>
+    </label>
+    <label> favorite: <input type= 'checkbox' name='favorite'></label>
+         <input type="submit" value="add food">
+</form>
+
+<%- include('../partials/footer') %>

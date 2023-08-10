@@ -8,6 +8,7 @@ module.exports = {
 };
 
 async function index(req, res) {
+    const foods = await Food.find({})
   res.render("foods/index", { title: "All Foods", foods });
 }
 
@@ -26,6 +27,6 @@ async function create(req, res) {
   } catch {
     err;
 
-    res.render("foods/new", { errorMsg: err.message });
+    res.render("/foods/new", { errorMsg: err.message });
   }
 }
