@@ -17,7 +17,7 @@ const foodSchema = new Schema(
         "Indian",
       ],
     },
-    favorite: { type: Boolean, default: false },
+    favorite: { type: Boolean },
   },
   {
     timestamps: true,

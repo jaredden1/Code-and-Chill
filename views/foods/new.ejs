@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<form id="New-food" action='/foods/' method='POST'>
+<form id="New-food" action='/foods' method='POST'>
     <label> name: <input type= 'text' name='name'></label>
     <label> category: <select name="category"> 
         <option value="American">American</option>
@@ -12,7 +12,7 @@
         <option value="Indian">Indian</option>
         </select>
     </label>
-    <label> favorite: <input type= 'checkbox' name='favorite'></label>
+    <label> favorite: <input type= 'checkbox' name='favorite' checked></label>
          <input type="submit" value="add food">
 </form>
 
