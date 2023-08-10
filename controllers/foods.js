@@ -2,7 +2,6 @@ const Food = require("../models/food")
 module.exports = {
     index,
     new: newFood,
-    
     show, 
     create, 
 }
