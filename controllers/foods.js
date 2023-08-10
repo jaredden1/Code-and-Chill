@@ -32,13 +32,13 @@ async function show(req, res, next) {
 }
 
 async function create(req, res) {
-    const foodData = {...req.body}
-    foodData.favorite = !!foodData.favorite
+    req.body.favorite = !!req.body.favorite
   try {
     await Food.create(req.body);
     res.redirect("/foods");
-  } catch {
-    err;
+  } catch (err) {
+    console.log(err);
+    
 
     res.render("/foods/new", { errorMsg: err.message });
   }
