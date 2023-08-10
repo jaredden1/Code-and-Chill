@@ -8,5 +8,5 @@ router.get('/', foodsCtrl.index);
 router.get('/new', foodsCtrl.new)
 router.get('/:id', foodsCtrl.show)
 router.post('/', foodsCtrl.create)
-
+router.post('/:id', foodsCtrl.delete)
 module.exports = router;

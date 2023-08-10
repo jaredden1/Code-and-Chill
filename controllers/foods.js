@@ -5,6 +5,7 @@ module.exports = {
   new: newFood,
   show,
   create,
+  delete: deleteFood, 
 };
 
 async function index(req, res) {
@@ -42,4 +43,9 @@ async function create(req, res) {
 
     res.render("/foods/new", { errorMsg: err.message });
   }
+}
+
+async function deleteFood(req,res){
+    Food.deleteFood(req.params.id)
+    res.redirect('/foods')
 }

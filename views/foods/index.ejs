@@ -14,6 +14,10 @@
           <td><%= f.name %></td>
           <td><%= f.category %></td>
           <td><a href="/foods/<%= f._id %>">DETAILS</a></td>
+          <td><form action ="/foods<%= f._id %>?_method=DELETE"
+          class="delete-form" method="POST">
+            <button type="'submit">Remove</button>
+      </form></td>
         </tr>
         <% }); %>
       </tbody>
